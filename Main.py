@@ -13,6 +13,7 @@ AutoBattle = cv2.imread("imgs/AutoBattle.png")
 GoToBattle = cv2.imread("imgs/InBattle.png")
 NewTurn = cv2.imread("imgs/NewTurn.png")
 continuePlay =  cv2.imread("imgs/Continue.png")
+cross = cv2.imread("imgs/Cross.png")
 
 def searchOnScreen(target, screen):
     result = cv2.matchTemplate(target, screen, cv2.TM_CCOEFF_NORMED)
@@ -56,6 +57,7 @@ def BattleStart():
     pyautogui.click()
 
 def MainGame():
+    '''
     screen = takeScreen()
     target = Start
     ans = searchOnScreen(target, screen)
@@ -86,13 +88,7 @@ def MainGame():
     pyautogui.moveTo(1000, 305)
     pyautogui.click()
     ans = []
-    while len(ans) == 0:
-        target = Gift
-        screen = takeScreen()
-        ans = searchOnScreen(target, screen)
-    pyautogui.moveTo(ans[0], ans[1])
-    pyautogui.click()
-    
+    '''
     while 1:
         screen = takeScreen()
 
